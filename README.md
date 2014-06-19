@@ -11,7 +11,7 @@
 
 ## Spacing
 
-  - Use soft tabs set to 4 spaces
+  - Use soft tabs set to 4 spaces.
 
     ```css
     // bad
@@ -30,7 +30,7 @@
     }
     ```
 
-  - Place 1 space after : in property declarations
+  - Place 1 space after : in property declarations, with no space before.
 
     ```css
     // bad
@@ -38,9 +38,28 @@
         color:red;
     }
 
+    // bad
+    .selector {
+        color : red;
+    }
+
     // good
     .selector {
         color: red;
+    }
+    ```
+
+  - Place 1 space after commas in lists.
+
+    ```css
+    // bad
+    .selector {
+        color: rgba(0,0,0,.1);
+    }
+
+    // good
+    .selector {
+        color: rgba(0, 0, 0, .1);
     }
     ```
 
@@ -282,13 +301,82 @@
     // bad
     .fatal-error {
         color: #f00;
-        @extend .error;
+        @extend %error;
+
+        p {
+            ...
+        }
     }
 
     // good
     .fatal-error {
         @extend .error;
         color: #f00;
+
+        p {
+            ...
+        }
+    }
+    ```
+
+  - Always use placeholder selectors in `@extend`.
+
+    ```css
+    // bad
+    .fatal {
+        @extend .error;
+    }
+
+    // good
+    .fatal {
+        @extend %error;
+    }
+    ```
+
+  - Place `@else` statements on the same line as the preceding curly brace.
+
+    ```css
+    // bad
+    @if {
+        ...
+    }
+    @else {
+        ...
+    }
+
+    // good
+    @if {
+        ...
+    } @else {
+        ...
+    }
+    ```
+
+  - Separate rule, function, and mixin declarations with empty lines.
+
+    ```css
+    // bad
+    p {
+        margin: 0;
+        em {
+            ...
+        }
+    }
+    a {
+        ...
+    }
+
+    // good
+    p {
+        margin: 0;
+
+        em {
+            ...
+        }
+    }
+
+    a {
+        ...
     }
     ```
 
