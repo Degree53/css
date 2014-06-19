@@ -1,4 +1,4 @@
-# Degree 53 CSS Style Guide() {
+# Degree 53 CSS .Style Guide {
 
 *A mostly reasonable approach to CSS*
 
@@ -29,4 +29,4 @@
     ```
 **[⬆ back to top](#table-of-contents)**
 
-# };
+# }
