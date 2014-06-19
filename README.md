@@ -1,4 +1,4 @@
-# Degree 53 CSS Style .Guide {
+# Degree 53 (Sassy) CSS Style .Guide {
 
 *A mostly reasonable approach to CSS*
 
@@ -6,6 +6,7 @@
 ## Table of Contents
 
   1. [Spacing](#spacing)
+  1. [Formatting](#formatting)
 
 ## Spacing
 
@@ -102,6 +103,26 @@
     .selector {
         color: #fff;
         background-color: #000;
+    }
+    ```
+
+##Formatting
+
+  - Use hex color codes `#000` unless using `rgba()`.
+
+  - Use 3 character hexadecimal notation where possible.
+
+    ```css
+    // bad
+    .selector {
+        color: #ff0000;
+        background-color: #ffffff;
+    }
+
+    // good
+    .selector {
+        color: #f00;
+        background-color: #fff;
     }
     ```
 
