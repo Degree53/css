@@ -6,7 +6,8 @@
 ## Table of Contents
 
   1. [Spacing](#spacing)
-  1. [Formatting](#formatting)
+  1. [Style Rules](#style-rules)
+  1. [Formatting Rules](#formatting-rules)
 
 ## Spacing
 
@@ -106,7 +107,9 @@
     }
     ```
 
-##Formatting
+**[⬆ back to top](#table-of-contents)**
+
+##Style Rules
 
   - Use hex color codes `#000` unless using `rgba()`.
 
@@ -149,6 +152,79 @@
         margin: 0;
     }
     ```
+
+  - Don't write leading zeros for numeric values with a decimal point.
+
+    ```css
+    // bad
+    .selector {
+        margin: 0.5em;
+    }
+
+    // good
+    .selector {
+        margin: .5em;
+    }
+    ```
+
+  - Use shorthand properties where possible, preferring the shortest form.
+
+    ```css
+    // bad
+    .selector {
+        padding-bottom: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 0;
+    }
+
+    // good
+    .selector {
+        padding: 0 1em 2em;
+    }
+
+    // bad
+    .selector {
+        margin: 1em 1em 1em 1em;
+        padding: 1em 2em 1em 2em;
+    }
+
+    // good
+    .selector {
+        margin: 1em;
+        padding: 1em 2em;
+    }
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
+##Formatting Rules
+
+  - Alphabetize declarations to achieve consistent code in a way that is easy to remember and maintain. Sublime Text will do this for you if you hilight the declaration and hit F9
+
+    ```css
+    // bad
+    .selector {
+        text-align: center;
+        text-indent: 2em;
+        border: 1px solid;
+        border-radius: 4px;
+        color: black;
+        background: fuchsia;
+    }
+
+    // good
+    .selector {
+        background: fuchsia;
+        border-radius: 4px;
+        border: 1px solid;
+        color: black;
+        text-align: center;
+        text-indent: 2em;
+    }
+    ```
+
+
 
 **[⬆ back to top](#table-of-contents)**
 
