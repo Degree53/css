@@ -68,12 +68,12 @@
     ```css
     // bad
     .selector{
-        ...
+        // ...stuff...
     }
 
     // good
     .selector {
-        ...
+        // ...stuff...
     }
     ```
 
@@ -82,19 +82,19 @@
     ```css
     // bad
     .selector {
-        ...
+        // ...stuff...
     }
     .selector--other {
-        ...
+        // ...stuff...
     }
 
     // good
     .selector {
-        ...
+        // ...stuff...
     }
 
     .selector--other {
-        ...
+        // ...stuff...
     }
     ```
 
@@ -103,13 +103,13 @@
     ```css
     // bad
     .selector--one, .selector--two, {
-        ...
+        // ...stuff...
     }
 
     // good
     .selector--one,
     .selector--two {
-        ...
+        // ...stuff...
     }
     ```
 
@@ -285,7 +285,7 @@
 
 ##SASS Specific
 
-  - Prefer `//` comments over `/* ... */` as they don't get rendered in the final generated CSS.
+  - Prefer `//` comments over `/* // ...stuff... */` as they don't get rendered in the final generated CSS.
 
     ```css
     // bad
@@ -304,7 +304,7 @@
         @extend %error;
 
         p {
-            ...
+            // ...stuff...
         }
     }
 
@@ -314,7 +314,7 @@
         color: #f00;
 
         p {
-            ...
+            // ...stuff...
         }
     }
     ```
@@ -338,17 +338,17 @@
     ```css
     // bad
     @if {
-        ...
+        // ...stuff...
     }
     @else {
-        ...
+        // ...stuff...
     }
 
     // good
     @if {
-        ...
+        // ...stuff...
     } @else {
-        ...
+        // ...stuff...
     }
     ```
 
@@ -359,11 +359,11 @@
     p {
         margin: 0;
         em {
-            ...
+            // ...stuff...
         }
     }
     a {
-        ...
+        // ...stuff...
     }
 
     // good
@@ -371,12 +371,12 @@
         margin: 0;
 
         em {
-            ...
+            // ...stuff...
         }
     }
 
     a {
-        ...
+        // ...stuff...
     }
     ```
 
