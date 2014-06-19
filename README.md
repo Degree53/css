@@ -49,12 +49,12 @@
     ```css
     // bad
     .selector{
-        // ...stuff...
+        ...
     }
 
     // good
     .selector {
-        // ...stuff...
+        ...
     }
     ```
 
@@ -63,19 +63,19 @@
     ```css
     // bad
     .selector {
-        // ...stuff...
+        ...
     }
     .selector--other {
-        // ...stuff...
+        ...
     }
 
     // good
     .selector {
-        // ...stuff...
+        ...
     }
 
     .selector--other {
-        // ...stuff...
+        ...
     }
     ```
 
@@ -84,13 +84,13 @@
     ```css
     // bad
     .selector--one, .selector--two, {
-        // ...stuff...
+        ...
     }
 
     // good
     .selector--one,
     .selector--two {
-        // ...stuff...
+        ...
     }
     ```
 
@@ -224,7 +224,7 @@
     }
     ```
 
-  - Use single ('') rather than double ("") quotation marks for attribute selectors or property values.
+  - Use single `''` rather than double `""` quotation marks for attribute selectors or property values.
 
     ```css
     // bad
@@ -238,6 +238,32 @@
     }
     ```
 
+  - Indent all block content to reflect hierarchy.
+
+    ```css
+    // bad
+    @media screen, projection {
+
+    html {
+        background: #fff;
+        color: #444;
+    }
+
+    }
+
+    // good
+    @media screen, projection {
+
+        html {
+            background: #fff;
+            color: #444;
+        }
+
+    }
+    ```
+
+**[⬆ back to top](#table-of-contents)**
+
 ##SASS Specific
 
   - Prefer `//` comments over `/* ... */` as they don't get rendered in the final generated CSS.
@@ -250,7 +276,21 @@
     // This comment never gets rendered
     ```
 
+  - Write `@extend` statements first in rule sets, followed by property declarations and then other nested rule sets.
 
+    ```css
+    // bad
+    .fatal-error {
+        color: #f00;
+        @extend .error;
+    }
+
+    // good
+    .fatal-error {
+        @extend .error;
+        color: #f00;
+    }
+    ```
 
 **[⬆ back to top](#table-of-contents)**
 
