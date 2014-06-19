@@ -126,6 +126,30 @@
     }
     ```
 
+  - Prefer `//` comments over `/* ... */` as they don't get rendered in the final generated CSS.
+
+    ```css
+    // bad
+    /* This is a comment that gets rendered */
+
+    // good
+    // This comment never gets rendered
+    ```
+
+  - Avoid specifying units for zero values.
+
+    ```css
+    // bad
+    .selector {
+        margin: 0px;
+    }
+
+    // good
+    .selector {
+        margin: 0;
+    }
+    ```
+
 **[⬆ back to top](#table-of-contents)**
 
 # }
