@@ -13,7 +13,7 @@
 
   - Use soft tabs set to 4 spaces.
 
-    ```css
+    ```scss
     // bad
     .selector {
     ∙∙color: red;
@@ -32,7 +32,7 @@
 
   - Place 1 space after : in property declarations, with no space before.
 
-    ```css
+    ```scss
     // bad
     .selector {
         color:red;
@@ -51,7 +51,7 @@
 
   - Place 1 space after commas in lists.
 
-    ```css
+    ```scss
     // bad
     .selector {
         color: rgba(0,0,0,.1);
@@ -65,7 +65,7 @@
 
   - Place 1 space before the leading brace.
 
-    ```css
+    ```scss
     // bad
     .selector{
         // ...stuff...
@@ -79,7 +79,7 @@
 
   - Place line breaks between rulesets.
 
-    ```css
+    ```scss
     // bad
     .selector {
         // ...stuff...
@@ -100,7 +100,7 @@
 
   - When grouping selectors, keep individual selectors to a single line.
 
-    ```css
+    ```scss
     // bad
     .selector--one, .selector--two, {
         // ...stuff...
@@ -115,7 +115,7 @@
 
   - Each declaration should appear on its own line for more accurate error reporting.
 
-    ```css
+    ```scss
     // bad
     .selector {background-color: #000; color: #fff;}
 
@@ -132,7 +132,7 @@
 
   - Code should be lowercase.
 
-    ```css
+    ```scss
     // bad
     .Selector {
         color: #E5E5E5;
@@ -148,7 +148,7 @@
 
   - Use 3 character hexadecimal notation where possible.
 
-    ```css
+    ```scss
     // bad
     .selector {
         background-color: #ffffff;
@@ -164,7 +164,7 @@
 
   - Avoid specifying units for zero values.
 
-    ```css
+    ```scss
     // bad
     .selector {
         margin: 0px;
@@ -178,7 +178,7 @@
 
   - Don't write leading zeros for numeric values with a decimal point.
 
-    ```css
+    ```scss
     // bad
     .selector {
         margin: 0.5em;
@@ -192,7 +192,7 @@
 
   - Use shorthand properties where possible, preferring the shortest form.
 
-    ```css
+    ```scss
     // bad
     .selector {
         padding-bottom: 2em;
@@ -221,7 +221,7 @@
 
   - Alphabetize declarations to achieve consistent code in a way that is easy to remember and maintain. Sublime Text will do this for you if you hilight the declaration and hit F9.
 
-    ```css
+    ```scss
     // bad
     .selector {
         text-align: center;
@@ -245,7 +245,7 @@
 
   - Use single `''` rather than double `""` quotation marks for attribute selectors or property values.
 
-    ```css
+    ```scss
     // bad
     .selector {
         font-family: "open sans", arial, sans-serif;
@@ -259,7 +259,7 @@
 
   - Indent all block content to reflect hierarchy.
 
-    ```css
+    ```scss
     // bad
     @media screen, projection {
 
@@ -287,7 +287,7 @@
 
   - Prefer `//` comments over `/* // ...stuff... */` as they don't get rendered in the final generated CSS.
 
-    ```css
+    ```scss
     // bad
     /* This is a comment that gets rendered */
 
@@ -297,7 +297,7 @@
 
   - Write `@extend` statements first in rule sets, followed by property declarations and then other nested rule sets.
 
-    ```css
+    ```scss
     // bad
     .fatal-error {
         color: #f00;
@@ -321,7 +321,7 @@
 
   - Always use placeholder selectors in `@extend`.
 
-    ```css
+    ```scss
     // bad
     .fatal {
         @extend .error;
@@ -335,7 +335,7 @@
 
   - Place `@else` statements on the same line as the preceding curly brace.
 
-    ```css
+    ```scss
     // bad
     @if {
         // ...stuff...
@@ -354,7 +354,7 @@
 
   - Separate rule, function, and mixin declarations with empty lines.
 
-    ```css
+    ```scss
     // bad
     p {
         margin: 0;
