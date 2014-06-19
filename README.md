@@ -6,8 +6,8 @@
 ## Table of Contents
 
   1. [Spacing](#spacing)
-  1. [Style Rules](#style-rules)
-  1. [Formatting Rules](#formatting-rules)
+  1. [Formatting](#formatting)
+  1. [SASS Specific](#sass-Specific)
 
 ## Spacing
 
@@ -98,18 +98,32 @@
 
     ```css
     // bad
-    .selector {color: #fff; background-color: #000;}
+    .selector {background-color: #000; color: #fff;}
 
     // good
     .selector {
-        color: #fff;
         background-color: #000;
+        color: #fff;
     }
     ```
 
 **[⬆ back to top](#table-of-contents)**
 
-##Style Rules
+##Formatting
+
+  - Code should be lowercase.
+
+    ```css
+    // bad
+    .Selector {
+        color: #E5E5E5;
+    }
+
+    // good
+    .selector {
+        color: #e5e5e5;
+    }
+    ```
 
   - Use hex color codes `#000` unless using `rgba()`.
 
@@ -118,25 +132,15 @@
     ```css
     // bad
     .selector {
-        color: #ff0000;
         background-color: #ffffff;
+        color: #ff0000;
     }
 
     // good
     .selector {
-        color: #f00;
         background-color: #fff;
+        color: #f00;
     }
-    ```
-
-  - Prefer `//` comments over `/* ... */` as they don't get rendered in the final generated CSS.
-
-    ```css
-    // bad
-    /* This is a comment that gets rendered */
-
-    // good
-    // This comment never gets rendered
     ```
 
   - Avoid specifying units for zero values.
@@ -196,11 +200,7 @@
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
-
-##Formatting Rules
-
-  - Alphabetize declarations to achieve consistent code in a way that is easy to remember and maintain. Sublime Text will do this for you if you hilight the declaration and hit F9
+  - Alphabetize declarations to achieve consistent code in a way that is easy to remember and maintain. Sublime Text will do this for you if you hilight the declaration and hit F9.
 
     ```css
     // bad
@@ -222,6 +222,32 @@
         text-align: center;
         text-indent: 2em;
     }
+    ```
+
+  - Use single ('') rather than double ("") quotation marks for attribute selectors or property values.
+
+    ```css
+    // bad
+    .selector {
+        font-family: "open sans", arial, sans-serif;
+    }
+
+    // good
+    .selector {
+        font-family: 'open sans', arial, sans-serif;
+    }
+    ```
+
+##SASS Specific
+
+  - Prefer `//` comments over `/* ... */` as they don't get rendered in the final generated CSS.
+
+    ```css
+    // bad
+    /* This is a comment that gets rendered */
+
+    // good
+    // This comment never gets rendered
     ```
 
 
