@@ -352,6 +352,24 @@
     }
     ```
 
+  - Functions, mixins, and variables should be declared with all lowercase letters and hyphens instead of underscores.
+
+    ```scss
+    // bad
+    $myVar: 10px;
+
+    @mixin myMixin() {
+        // ...stuff...
+    }
+
+    // good
+    $my-var: 10px;
+
+    @mixin my-mixin() {
+        // ...stuff...
+    }
+    ```
+
   - Separate rule, function, and mixin declarations with empty lines.
 
     ```scss
