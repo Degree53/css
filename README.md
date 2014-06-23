@@ -5,9 +5,18 @@
 
 ## Table of Contents
 
+  1. [General Rules](#general-rules)
   1. [Spacing](#spacing)
   1. [Formatting](#formatting)
   1. [SASS Specific](#sass-Specific)
+
+## General Rules
+
+  - Don't use `#id's` in your CSS. Use `.classes` to allow for the maximum level of reusability.
+
+  - Don't add vendor prefixes manually. Use `@mixins` or [autoprefixer](https://github.com/ai/autoprefixer) which allows you to write your CSS rules without vendor prefixes (in fact, forget about them entirely).
+
+  **[⬆ back to top](#table-of-contents)**
 
 ## Spacing
 
@@ -285,6 +294,14 @@
 
 ##SASS Specific
 
+  - Variablize all common values
+
+    ```scss
+    $brand-primary: #2c9c54;
+    $brand-secondary: darken($brand-primary, 20%);
+    $brand-error: #f00;
+    ```
+
   - Prefer `//` comments over `/* // ...stuff... */` as they don't get rendered in the final generated CSS.
 
     ```scss
@@ -295,23 +312,13 @@
     // This comment never gets rendered
     ```
 
-  - Write `@extend` statements first in rule sets, followed by property declarations and then other nested rule sets.
+  - Write `@extend` statements first in rule sets, followed by "regular" property declarations, then `@include` statements and finally nested rule sets. Nothing goes after the nested stuff.
 
     ```scss
-    // bad
-    .fatal-error {
-        color: #f00;
-        @extend %error;
-
-        p {
-            // ...stuff...
-        }
-    }
-
-    // good
     .fatal-error {
         @extend .error;
-        color: #f00;
+        color: $brand-error;
+        @include transition(all 0.3s ease);
 
         p {
             // ...stuff...
