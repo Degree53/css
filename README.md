@@ -16,7 +16,7 @@
 
   - Don't add vendor prefixes manually. Use `@mixins` or [autoprefixer](https://github.com/ai/autoprefixer) which allows you to write your CSS rules without vendor prefixes (in fact, forget about them entirely).
 
-  **[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**
 
 ## Spacing
 
