@@ -39,7 +39,7 @@
     }
     ```
 
-  - Place 1 space after : in property declarations, with no space before.
+  - Place 1 space after `:` in property declarations, with no space before.
 
     ```scss
     // bad
@@ -270,7 +270,7 @@
 
     ```scss
     // bad
-    @media screen, projection {
+    @media screen {
 
     html {
         background: #fff;
@@ -280,7 +280,7 @@
     }
 
     // good
-    @media screen, projection {
+    @media screen {
 
         html {
             background: #fff;
@@ -316,7 +316,7 @@
 
     ```scss
     .fatal-error {
-        @extend .error;
+        @extend %error;
         color: $brand-error;
         @include transition(all .3s ease);
 
