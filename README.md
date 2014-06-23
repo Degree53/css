@@ -318,7 +318,7 @@
     .fatal-error {
         @extend .error;
         color: $brand-error;
-        @include transition(all 0.3s ease);
+        @include transition(all .3s ease);
 
         p {
             // ...stuff...
