@@ -302,7 +302,7 @@
     $brand-error: #f00;
     ```
 
-  - Prefer `//` comments over `/* // ...stuff... */` as they don't get rendered in the final generated CSS.
+  - Prefer `//` comments over `/* */` as they don't get rendered in the final generated CSS.
 
     ```scss
     // bad
